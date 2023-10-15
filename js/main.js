@@ -194,6 +194,10 @@ function stopRotateWheel() {
             ctx.restore();
             numero = localStorage.text;
             win.textContent="Sembra che tu abbia già girato la ruota una volta, hai vinto " + numero;
+            if (mobile.matches)
+            {
+                win.classList.add("")
+            }
         }
     else
         {

@@ -355,3 +355,8 @@ video
 {
   color: white;
 }
+.text-mobile
+{
+  padding: 10px;
+ text-align-last: center;
+}
