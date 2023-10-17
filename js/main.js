@@ -1,10 +1,10 @@
-var options = ["40€","50€","60€","40€","50€","60€","40€"];
+var options = ["40€","50€","60€","40€","50€","60€","40€","50€"];
 
 var startAngle = 0;
 var arc = Math.PI / (options.length / 2);
 var spinTimeout = null;
 var count = 0;
-var form_email = document.querySelector(".contact-from")
+var form_email = document.querySelector(".container-form")
 var spinArcStart = 10;
 var spinTime = 0;
 var spinTimeTotal = 0;
@@ -25,10 +25,10 @@ function RGB2Color(r,g,b) {
     return '#' + byte2Hex(r) + byte2Hex(g) + byte2Hex(b);
 }
 
-function getColor(item, maxitem) {
+/* function getColor(item, maxitem) {
     var phase = 0;
-    var center = 128;
-    var width = 127;
+    var center = 80;
+    var width = 126;
     var frequency = Math.PI*2/maxitem;
 
     red   = Math.sin(frequency*item+2+phase) * width + center;
@@ -36,7 +36,59 @@ function getColor(item, maxitem) {
     blue  = Math.sin(frequency*item+4+phase) * width + center;
 
     return RGB2Color(red,green,blue);
+} */
+/* function getColor(item, maxitem) {
+    var phase = 0;
+    var center = 80;
+    var width = 126;
+    var frequency = Math.PI * 2 / maxitem;
+
+    var red, green, blue;
+
+    // Calcola i valori RGB
+    red = Math.sin(frequency * item + 2 + phase) * width + center;
+    green = Math.sin(frequency * item + 0 + phase) * width + center;
+    blue = Math.sin(frequency * item + 4 + phase) * width + center;
+
+    // Verifica se il colore è blu, rosso, viola o verde
+    if (blue > red && blue > green) {
+        // Restituisci il colore blu
+        return 'blue';
+    } else if (red > blue && red > green) {
+        // Restituisci il colore rosso
+        return 'red';
+    } else if (red > green && blue > green) {
+        // Restituisci il colore viola
+        return 'purple';
+    } else {
+        // Restituisci il colore verde
+        return 'green';
+    }
+} */
+function getColor(item, maxitem) {
+    var phase = 126;
+    var center = 126;
+    var width = 126;
+    var frequency = Math.PI * 2 / maxitem;
+
+    var red, green, blue;
+    var colorOrder = ['#ef2e7a', '#f9c3e4', '#d7e727', '#49c1b4'];
+
+    // Calcola i valori RGB
+    red = Math.sin(frequency * item + 2 + phase) * width + center;
+    green = Math.sin(frequency * item + 100 + phase) * width + center;
+    blue = Math.sin(frequency * item + 4 + phase) * width + center;
+
+    // Determina l'indice del colore da restituire in base all'ordine
+    var colorIndex = item % colorOrder.length;
+
+    // Restituisci il colore in base all'ordine
+    return colorOrder[colorIndex];
 }
+
+
+
+
 
 function drawRouletteWheel() {
     var canvas = document.getElementById("canvas");
@@ -65,7 +117,7 @@ function drawRouletteWheel() {
                 ctx.arc(150, 150, insideRadius, angle + arc, angle, true);
                 ctx.stroke();
                 ctx.fill();
-
+                ctx.boxShadow="0px 27px 12px 15px rgba(0,0,0,0.82);";
                 ctx.save();
                 ctx.shadowOffsetX = -1;
                 ctx.shadowOffsetY = -1;
@@ -113,8 +165,8 @@ function drawRouletteWheel() {
                 ctx.fillStyle = getColor(i, options.length);
 
                 ctx.beginPath();
-                ctx.arc(400, 400, outsideRadius, angle, angle + arc, false);
-                ctx.arc(400, 400, insideRadius, angle + arc, angle, true);
+                ctx.arc(350, 350, outsideRadius, angle, angle + arc, false);
+                ctx.arc(350, 350, insideRadius, angle + arc, angle, true);
                 ctx.stroke();
                 ctx.fill();
                 ctx.save();
@@ -123,8 +175,8 @@ function drawRouletteWheel() {
                 ctx.shadowBlur    = 0;
                 ctx.shadowColor   = "rgb(220,220,220)";
                 ctx.fillStyle = "black";
-                ctx.translate(400 + Math.cos(angle + arc / 2) * textRadius,
-                    400 + Math.sin(angle + arc / 2) * textRadius);
+                ctx.translate(350 + Math.cos(angle + arc / 2) * textRadius,
+                    350 + Math.sin(angle + arc / 2) * textRadius);
                 ctx.rotate(angle + arc / 2 + Math.PI / 2);
                 var text = options[i];
                 ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
@@ -134,15 +186,16 @@ function drawRouletteWheel() {
             //Arrow
             ctx.fillStyle = "white";
             ctx.beginPath();
-            ctx.moveTo(400 - 8, 380 - (outsideRadius + 5));
-            ctx.lineTo(400 + 8, 380 - (outsideRadius + 5));
-            ctx.lineTo(400 + 8, 410 - (outsideRadius - 5));
-            ctx.lineTo(400 + 18, 410 - (outsideRadius - 5));
-            ctx.lineTo(400 + 0, 430 - (outsideRadius - 13));
-            ctx.lineTo(400 - 18, 410 - (outsideRadius - 5));
-            ctx.lineTo(400 - 8, 410 - (outsideRadius - 5));
-            ctx.lineTo(400 - 8, 410 - (outsideRadius + 5));
+            ctx.moveTo(350, 3 + (outsideRadius + 5));
+            ctx.lineTo(350 + 8, 3 + (outsideRadius + 5));
+            ctx.lineTo(350 + 8, -10 + (outsideRadius - 5));
+            ctx.lineTo(350 + 18, -10 + (outsideRadius - 5));
+            ctx.lineTo(350 + 0, -15 + (outsideRadius - 13));
+            ctx.lineTo(350 - 18, -10 + (outsideRadius - 5));
+            ctx.lineTo(350 - 8, -10 + (outsideRadius - 5));
+            ctx.lineTo(350 - 8, -5 + (outsideRadius + 5));
             ctx.fill();
+
         }
     }
 
@@ -174,7 +227,7 @@ function rotateWheel() {
 }
 
 function stopRotateWheel() {
-    localStorage.clear();
+
     var win = document.querySelector(".text-win");
 
     clearTimeout(spinTimeout);
