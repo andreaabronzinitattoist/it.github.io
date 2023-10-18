@@ -266,8 +266,7 @@ textarea {
 {
   border-radius: 3%;
   top: 100px;
-  display: flex;
-  flex-direction: row;
+  display: flex;flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 90%;
@@ -279,8 +278,11 @@ textarea {
 .description-test
 {
   padding: 5%;
-  font-size: large;
+  font-size: x-large;
   line-height: 32px;
+  max-width: 100%;
+  
+
 }
 .roulette-container
 {
@@ -299,7 +301,7 @@ textarea {
   background-color: rgba(73,193,180,0.7);
   position: absolute;
   width: 40%;
-  height: 70%;
+  max-height: fit-content;
   right: 5%;
   border: 2px black solid;
   box-shadow: 0px 27px 12px 15px rgba(0,0,0,0.82);
@@ -413,5 +415,69 @@ video
   border: none;
   border-bottom: 3px solid dodgerblue;
 
+}
+@media screen and (max-width: 1400px) {
+
+  .description
+  {
+    border-radius: 10%;
+    background-color: rgba(73,193,180,0.7);
+    position: absolute;
+    width: 90%;
+    height: fit-content;
+    top: 2%;
+    border: 2px black solid;
+    box-shadow: 0px 27px 12px 15px rgba(0,0,0,0.82);
+  }
+  .container-form-and-description
+  {
+    height: 120%;
+    top: 0;
+
+  }
+  .roulette-container
+  {
+    bottom: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    max-height: 40%;
+    position: absolute;
+    left: 30%;
+
+  }
+}
+@media screen and (max-width: 700px) {
+
+  .description
+  {
+    border-radius: 10%;
+    background-color: rgba(73,193,180,0.7);
+    position: absolute;
+    width: 90%;
+    height: fit-content;
+    top: 2%;
+    border: 2px black solid;
+    box-shadow: 0px 27px 12px 15px rgba(0,0,0,0.82);
+  }
+  .container-form-and-description
+  {
+    height: 90%;
+    top: 0;
+
+  }
+  .roulette-container
+  {
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    max-height: 40%;
+    position: absolute;
+    left: 30%;
+
+  }
 }
 
