@@ -281,7 +281,7 @@ textarea {
   font-size: x-large;
   line-height: 32px;
   max-width: 100%;
-  
+
 
 }
 .roulette-container
@@ -431,13 +431,13 @@ video
   }
   .container-form-and-description
   {
-    height: 120%;
+    height: 140%;
     top: 0;
 
   }
   .roulette-container
   {
-    bottom: 15%;
+    bottom: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -463,13 +463,13 @@ video
   }
   .container-form-and-description
   {
-    height: 90%;
+    height: 140%;
     top: 0;
 
   }
   .roulette-container
   {
-    bottom: 5%;
+    bottom: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
