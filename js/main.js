@@ -25,46 +25,6 @@ function RGB2Color(r,g,b) {
     return '#' + byte2Hex(r) + byte2Hex(g) + byte2Hex(b);
 }
 
-/* function getColor(item, maxitem) {
-    var phase = 0;
-    var center = 80;
-    var width = 126;
-    var frequency = Math.PI*2/maxitem;
-
-    red   = Math.sin(frequency*item+2+phase) * width + center;
-    green = Math.sin(frequency*item+0+phase) * width + center;
-    blue  = Math.sin(frequency*item+4+phase) * width + center;
-
-    return RGB2Color(red,green,blue);
-} */
-/* function getColor(item, maxitem) {
-    var phase = 0;
-    var center = 80;
-    var width = 126;
-    var frequency = Math.PI * 2 / maxitem;
-
-    var red, green, blue;
-
-    // Calcola i valori RGB
-    red = Math.sin(frequency * item + 2 + phase) * width + center;
-    green = Math.sin(frequency * item + 0 + phase) * width + center;
-    blue = Math.sin(frequency * item + 4 + phase) * width + center;
-
-    // Verifica se il colore è blu, rosso, viola o verde
-    if (blue > red && blue > green) {
-        // Restituisci il colore blu
-        return 'blue';
-    } else if (red > blue && red > green) {
-        // Restituisci il colore rosso
-        return 'red';
-    } else if (red > green && blue > green) {
-        // Restituisci il colore viola
-        return 'purple';
-    } else {
-        // Restituisci il colore verde
-        return 'green';
-    }
-} */
 function getColor(item, maxitem) {
     var phase = 126;
     var center = 126;
@@ -96,9 +56,9 @@ function drawRouletteWheel() {
     if (mobile.matches)
     {
         if (canvas.getContext) {
-            var outsideRadius = 150;
+            var outsideRadius = 300;
             var textRadius = 80;
-            var insideRadius = 40;
+            var insideRadius = 20;
             canvas.height="300";
             canvas.width="300";
             ctx = canvas.getContext("2d");
@@ -261,11 +221,6 @@ function stopRotateWheel() {
             numero = localStorage.text;
             win.textContent="Congratulazione hai vinto " + numero;
         }
-
-
-
-
-
 
 }
 
