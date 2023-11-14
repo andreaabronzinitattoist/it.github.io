@@ -1,3 +1,4 @@
+
 var options = ["40€","50€","60€","40€","50€","60€","40€","50€"];
 
 var startAngle = 0;
@@ -56,13 +57,13 @@ function drawRouletteWheel() {
     if (mobile.matches)
     {
         if (canvas.getContext) {
-            var outsideRadius = 300;
-            var textRadius = 80;
+            var outsideRadius = 190;
+            var textRadius = 120;
             var insideRadius = 20;
-            canvas.height="300";
-            canvas.width="300";
+            canvas.height="400";
+            canvas.width="400";
             ctx = canvas.getContext("2d");
-            ctx.lineWidth = 2;
+            ctx.lineWidth = 0;
 
 
             ctx.font = 'bold 25px Helvetica, Arial';
@@ -73,8 +74,8 @@ function drawRouletteWheel() {
                 ctx.fillStyle = getColor(i, options.length);
 
                 ctx.beginPath();
-                ctx.arc(150, 150, outsideRadius, angle, angle + arc, false);
-                ctx.arc(150, 150, insideRadius, angle + arc, angle, true);
+                ctx.arc(200, 200, outsideRadius, angle, angle + arc, false);
+                ctx.arc(200, 200, insideRadius, angle + arc, angle, true);
                 ctx.stroke();
                 ctx.fill();
                 ctx.boxShadow="0px 27px 12px 15px rgba(0,0,0,0.82);";
@@ -84,8 +85,8 @@ function drawRouletteWheel() {
                 ctx.shadowBlur    = 0;
                 ctx.shadowColor   = "rgb(220,220,220)";
                 ctx.fillStyle = "black";
-                ctx.translate(150 + Math.cos(angle + arc / 2) * textRadius,
-                    150 + Math.sin(angle + arc / 2) * textRadius);
+                ctx.translate(200 + Math.cos(angle + arc / 2) * textRadius,
+                    200 + Math.sin(angle + arc / 2) * textRadius);
                 ctx.rotate(angle + arc / 2 + Math.PI / 2);
                 var text = options[i];
                 ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
@@ -95,14 +96,14 @@ function drawRouletteWheel() {
             //Arrow
             ctx.fillStyle = "white";
             ctx.beginPath();
-            ctx.moveTo(400 - 8, 380 - (outsideRadius + 5));
-            ctx.lineTo(400 + 8, 380 - (outsideRadius + 5));
-            ctx.lineTo(400 + 8, 410 - (outsideRadius - 5));
-            ctx.lineTo(400 + 18, 410 - (outsideRadius - 5));
-            ctx.lineTo(400 + 0, 430 - (outsideRadius - 13));
-            ctx.lineTo(400 - 18, 410 - (outsideRadius - 5));
-            ctx.lineTo(400 - 8, 410 - (outsideRadius - 5));
-            ctx.lineTo(400 - 8, 410 - (outsideRadius + 5));
+            ctx.moveTo(350 - 150, 3 + (outsideRadius + 5) - 130);
+            ctx.lineTo(350 + 8 - 150, 3 + (outsideRadius + 5) - 130);
+            ctx.lineTo(350 + 8 - 150, -10 + (outsideRadius - 5) - 130);
+            ctx.lineTo(350 + 18 - 150, -10 + (outsideRadius - 5) - 130);
+            ctx.lineTo(350 + 0 - 150, -15 + (outsideRadius - 13) - 130);
+            ctx.lineTo(350 - 18 - 150, -10 + (outsideRadius - 5) - 130);
+            ctx.lineTo(350 - 8 - 150, -10 + (outsideRadius - 5) - 130);
+            ctx.lineTo(350 - 8 - 150, -5 + (outsideRadius + 5) - 130);
             ctx.fill();
         }
     } else
@@ -114,7 +115,7 @@ function drawRouletteWheel() {
             var insideRadius = 50;
 
             ctx = canvas.getContext("2d");
-            ctx.lineWidth = 2;
+            ctx.lineWidth = 0;
 
 
             ctx.font = 'bold 40px Helvetica, Arial';
@@ -174,7 +175,7 @@ function spin() {
 }
 
 function rotateWheel() {
-    spinTime += 30;
+    spinTime += 20;
 
     if(spinTime >= spinTimeTotal) {
         stopRotateWheel();
@@ -183,7 +184,7 @@ function rotateWheel() {
     var spinAngle = spinAngleStart - easeOut(spinTime, 0, spinAngleStart, spinTimeTotal);
     startAngle += (spinAngle * Math.PI / 180);
     drawRouletteWheel();
-    spinTimeout = setTimeout('rotateWheel()', 30);
+    spinTimeout = setTimeout('rotateWheel()', 20);
 }
 
 function stopRotateWheel() {
@@ -193,7 +194,7 @@ function stopRotateWheel() {
     clearTimeout(spinTimeout);
     var degrees = startAngle * 180 / Math.PI + 90;
     var arcd = arc * 180 / Math.PI;
-    var index = Math.floor((360 - degrees % 360) / arcd);
+    var index = Math.floor((0 - degrees % 360) / arcd);
 
     ctx.save();
     ctx.font = 'bold 30px Helvetica, Arial';
@@ -250,6 +251,9 @@ function sendMsg(e)
     }).then(
         message => alert("Email inviata con successo, verrai ricontattato il prima possibile")
     );
+
 }
+
+
 form.addEventListener('submit', sendMsg);
 

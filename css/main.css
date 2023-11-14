@@ -262,6 +262,7 @@ textarea {
 }
 
 /* mine css */
+
 .container-form-and-description
 {
   border-radius: 30px;
@@ -271,9 +272,6 @@ textarea {
   align-items: center;
   width: 90%;
   height: 80%;
-  position: absolute;
-  box-shadow: 0px 27px 12px 15px rgba(0,0,0,0.82);
-  background-color: rgba(0,0,0,0.6);
 }
 .description-test
 {
@@ -281,34 +279,35 @@ textarea {
   font-size: x-large;
   line-height: 32px;
   max-width: 100%;
-
-
 }
 .roulette-container
 {
-  left: 5%;
+
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40%;
   max-height: 40%;
-  position: absolute;
-
+  padding-bottom: 1%;
 }
-.description
+.test
 {
-  border-radius: 30px;
-  background-color: rgba(73,193,180,0.7);
-  position: absolute;
-  width: 40%;
-  max-height: fit-content;
-  right: 5%;
-  border: 2px black solid;
-  -webkit-box-shadow: 0px 15px 0px 7px #000000;
-  box-shadow: 0px 15px 0px 7px #000000;
+  animation-delay: 3s;
+  padding: 5%;
+  border-radius: 20px;
+  background-color: rgba(13,14,13,0.5);
+  margin-top: 20%;
+  margin-bottom: 100%;
+  font-size: large;
+text-align: center;
+  width: 70%;
+  height: auto;
+  border:3px solid #f9c3e4;
 }
+
 #canvas
 {
+  bottom: 1%;
   position: relative;
   width: fit-content;
   height: fit-content;
@@ -334,20 +333,19 @@ textarea {
 video
 {
   width: 100%;
-  height: auto;
-  position: absolute;
+  height: max-content;
+
 
 }
 .wrapper
 {
   width: 100%;
-  max-height: 80vh;
+  height: auto;
 }
 
 .contact-from
 {
   border: 2px black solid;
-  position: absolute;
   width: 90%;
   height: 90%;
   z-index: 4;
@@ -358,22 +356,7 @@ video
   flex-direction: row;
   border-radius: 30px;
 }
-.prova
-{
-  width: 50%;
-  height: 50%;
-}
-.container-form
-{
-  flex-direction: row;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items:center;
-  background-color: rgba(13,14,13,0.5);
-}
+
 
 .active{
   display: none;
@@ -381,204 +364,16 @@ video
   height: 0;
 }
 
-.text-win
+
+
+
+
+@media screen and (max-width: 1400px)
 {
-  color: white;
-  z-index: 5;
-  position: absolute;
-  top: 100px;
-}
 
-.image-tattoo
+}
+@media screen and (max-width: 700px)
 {
-  background-color: #222222;
-  width: 50%;
-  height: 90%;
-  position: absolute;
-  z-index: 4;
-  display: flex;
-}
-.wrapper-register-form
-{
-  width: 50%;
-  height: 50%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-}
-.form-details
-{
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #49c1b4;
-  width: 80%;
 
 
-}
-.button-details
-{
-  border-radius: 30px;
-  border: none;
-  width: 20%;
-}
-@media screen and (max-width: 1400px) {
-
-  .description
-  {
-    border-radius: 30px;
-    background-color: rgba(73,193,180,0.7);
-    position: absolute;
-    width: 90%;
-    height: fit-content;
-    top: 2%;
-    border: 2px black solid;
-    box-shadow: 0px 27px 12px 15px rgba(0,0,0,0.82);
-  }
-  .container-form-and-description
-  {
-    height: 140%;
-    top: 0;
-
-  }
-  .roulette-container
-  {
-    bottom: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    max-height: 40%;
-    position: absolute;
-    left: 30%;
-
-  }
-  .text-win
-  {
-    padding-left: 5%;
-    padding-right: 5%;
-    width: fit-content;
-  }
-}
-@media screen and (max-width: 700px) {
-
-
-  .description
-  {
-    border-radius: 10%;
-    background-color: rgba(73,193,180,1);
-    position: absolute;
-    width: 100%;
-    height: fit-content;
-    top: 2%;
-    left: 1%;
-    border: 2px black solid;
-    box-shadow: 0px 27px 12px 15px rgba(0,0,0,0.82);
-  }
-  .container-form-and-description
-  {
-    height: 140%;
-    width: 100%;
-    background-color: transparent;
-    top: 0;
-
-  }
-  .roulette-container
-  {
-    bottom: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    max-height: 40%;
-    position: absolute;
-    left: 30%;
-  }
-  .wrapper
-  {
-    background-color: transparent;
-  }
-  video
-  {
-    display: none;
-  }
-  .wrapper-register-form
-  {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    color: white;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-  }
-  .contact-from
-  {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 4;
-    display: flex;
-    background-color: black;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-  }
-  .container-form
-  {
-    top: 15%;
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    background-color: transparent;
-    justify-content: center;
-    align-items:center;
-
-  }
-  .prova
-  {
-
-    border-radius: 30px;
-    width: 100%;
-    height: 100%;
-    background-color: #49c1b4;
-  }
-  .wrapper-register-form
-  {
-    background-color: #49c1b4;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 20%;
-  }
-  .text-win
-  {
-    width: 100%;
-    height: 20%;
-    text-align: center;
-    top: 3%;
-    color: black;
-  }
-  .active
-  {
-    display: none;
-    width: 0;
-    height: 0;
-  }
-  .contact-from
-  {
-    width: 95%;
-    background-color: #49c1b4;
-    border: 2px black solid;
-    left: 3%;
-  }
-  .spin-img
-  {
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    z-index: 1;
-  }
 }
