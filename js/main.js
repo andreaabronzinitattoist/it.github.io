@@ -253,6 +253,43 @@ function sendMsg(e)
     );
 
 }
+// Funzione per controllare quando l'elemento è visibile nella finestra
+function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function handleScrollAnimation() {
+var testDiv = document.querySelector('.test');
+var testDiv1 = document.querySelector('.test-1');
+var triggerPosition = 200;
+var triggerPosition1 = 550;
+
+if (window.scrollY > triggerPosition && !testDiv.classList.contains('zoom-in-animation')) {
+    testDiv.classList.add('zoom-in-animation');
+}
+
+if (window.scrollY > triggerPosition1 && !testDiv1.classList.contains('slide-left-animation')) {
+    setTimeout(function() {
+        testDiv1.classList.add('slide-left-animation');
+    }, 100);
+}
+}
+
+window.addEventListener('scroll', function() {
+    handleScrollAnimation();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    handleScrollAnimation();
+});
+
+
 
 
 form.addEventListener('submit', sendMsg);

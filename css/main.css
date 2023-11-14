@@ -290,20 +290,38 @@ textarea {
   max-height: 40%;
   padding-bottom: 1%;
 }
-.test
+.test,.test-1
 {
   animation-delay: 3s;
   padding: 5%;
   border-radius: 20px;
   background-color: rgba(13,14,13,0.5);
-  margin-top: 20%;
-  margin-bottom: 100%;
+  margin-top: 40%;
+  margin-bottom: 40%;
   font-size: large;
 text-align: center;
   width: 70%;
   height: auto;
   border:3px solid #f9c3e4;
 }
+/* Aggiungi questa regola CSS al tuo foglio di stile */
+.zoom-in-animation {
+  animation: zoomIn 1s ease forwards;
+  transform-origin: center;
+  opacity: 0;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 
 #canvas
 {
@@ -362,6 +380,25 @@ video
   display: none;
   width: 0;
   height: 0;
+}
+
+/* Animazione di slide */
+.test-1,.test {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Aggiungi questa regola CSS al tuo foglio di stile */
+.test-1,.test {
+  opacity: 0;
+  transition: opacity 1s, transform 2s;
+
+}
+
+.slide-left-animation {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 
