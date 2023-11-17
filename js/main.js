@@ -1,24 +1,23 @@
+const options = ["40€", "50€", "60€", "40€", "50€", "60€", "40€", "50€"];
 
-var options = ["40€","50€","60€","40€","50€","60€","40€","50€"];
-
-var startAngle = 0;
-var arc = Math.PI / (options.length / 2);
-var spinTimeout = null;
-var count = 0;
-var form_email = document.querySelector(".container-form")
-var spinArcStart = 10;
-var spinTime = 0;
-var spinTimeTotal = 0;
-var text = "";
-var ctx;
-var mobile = window.matchMedia("(max-width: 700px)");
-var numero = "";
+let startAngle = 0;
+let arc = Math.PI / (options.length / 2);
+let spinTimeout = null;
+let count = 0;
+let form_email = document.querySelector(".container-form");
+let spinArcStart = 10;
+let spinTime = 0;
+let spinTimeTotal = 0;
+let text = "";
+let ctx;
+let mobile = window.matchMedia("(max-width: 700px)");
+let numero = "";
 
 
 document.getElementById("spin").addEventListener("click", spin);
 
 function byte2Hex(n) {
-    var nybHexString = "0123456789ABCDEF";
+    const nybHexString = "0123456789ABCDEF";
     return String(nybHexString.substr((n >> 4) & 0x0F,1)) + nybHexString.substr(n & 0x0F,1);
 }
 
@@ -27,7 +26,7 @@ function RGB2Color(r,g,b) {
 }
 
 function getColor(item, maxitem) {
-    var phase = 126;
+    const phase = 126;
     var center = 126;
     var width = 126;
     var frequency = Math.PI * 2 / maxitem;
@@ -235,22 +234,20 @@ drawRouletteWheel();
 const form = document.querySelector('.contact-from');
 function sendMsg(e)
 {
-    e.preventDefault()
-    nomepersona = document.querySelector('.name');
-    email = document.querySelector('.email');
-    ms = document.querySelector('.ms');
+    var nome = document.querySelector(".name");
+    var cell = document.querySelector(".number");
+    var instagram = document.querySelector(".instagram-name");
 
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "andrea.bronzini.tattoo@gmail.com",
-        Password : "9500C6D053EAA8489B0DFC135D50C4645370",
-        To : 'andrea.bronzini.tattoo@gmail.com',
-        From : 'andrea.bronzini.tattoo@gmail.com',
-        Subject : "contact from",
-        Body : "nome: " + nomepersona.value + "\r email: " + email.value + " \r " + ms.value + numero
+        SecureToken : "83e11cd7-e01b-47c3-a1e7-86924d7b6909",
+        To : 'andrea.abronzini.tattoist@gmail.com',
+        From : "andrea.abronzini.tattoist@gmail.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"+nome.value+cell.value+instagram.value
     }).then(
-        message => alert("Email inviata con successo, verrai ricontattato il prima possibile")
+        message => alert(message)
     );
+
 
 }
 // Funzione per controllare quando l'elemento è visibile nella finestra
@@ -280,6 +277,7 @@ if (window.scrollY > triggerPosition1 && !testDiv1.classList.contains('slide-lef
     }, 100);
 }
 }
+form.addEventListener('submit', sendMsg);
 
 window.addEventListener('scroll', function() {
     handleScrollAnimation();
@@ -292,5 +290,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-form.addEventListener('submit', sendMsg);
+
 

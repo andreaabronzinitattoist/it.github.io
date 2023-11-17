@@ -348,10 +348,10 @@ text-align: center;
   background-color: transparent;
   z-index: 2;
 }
-video
+.video
 {
   width: 100%;
-  height: max-content;
+  height: 800px;
 
 
 }
