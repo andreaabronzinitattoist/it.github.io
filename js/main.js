@@ -1,5 +1,4 @@
 const options = ["40€", "50€", "60€", "40€", "50€", "60€", "40€", "50€"];
-
 let startAngle = 0;
 let arc = Math.PI / (options.length / 2);
 let spinTimeout = null;
@@ -195,34 +194,34 @@ function stopRotateWheel() {
     clearTimeout(spinTimeout);
     var degrees = startAngle * 180 / Math.PI + 90;
     var arcd = arc * 180 / Math.PI;
-    var index = Math.floor((0 - degrees % 360) / arcd);
+    var index = Math.floor((360 - degrees % 360) / arcd);
 
     ctx.save();
     ctx.font = 'bold 30px Helvetica, Arial';
     text = options[index]
 
 
-        if ((localStorage.text == "40€") || (localStorage.text == "50€") || (localStorage.text == "60€")  )
-        {
+    if ((localStorage.text == "40€") || (localStorage.text == "50€") || (localStorage.text == "60€")  )
+    {
 
-            form_email.classList.remove("active")
-            ctx.restore();
-            numero = localStorage.text;
-            win.textContent="Sembra che tu abbia già girato la ruota una volta, hai vinto " + numero;
-            if (mobile.matches)
-            {
-                win.classList.add("")
-            }
+        form_email.classList.remove("active")
+        ctx.restore();
+        numero = localStorage.text;
+        win.textContent="Sembra che tu abbia già girato la ruota una volta, hai vinto " + numero;
+        if (mobile.matches)
+        {
+            win.classList.add("")
         }
+    }
     else
-        {
+    {
 
-            localStorage.text = text;
-            ctx.restore();
-            form_email.classList.remove("active")
-            numero = localStorage.text;
-            win.textContent="Congratulazione hai vinto " + numero;
-        }
+        localStorage.text = text;
+        ctx.restore();
+        form_email.classList.remove("active")
+        numero = localStorage.text;
+        win.textContent="Congratulazione hai vinto " + numero;
+    }
 
 }
 
