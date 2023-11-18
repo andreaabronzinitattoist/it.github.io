@@ -264,10 +264,12 @@ textarea {
 /* form */
 .upper-video
 {
-  height: 500px;
+  top: 0;
+  height: 600px;
   width: 100%;
   background-color: transparent;
   position: absolute;
+  z-index: 1;
 
 }
 .wrapper-register-form
@@ -321,7 +323,7 @@ body
   align-items: center;
 }
 .container-form {
-top: 3%;
+top: 1px;
   width: 99%;
   z-index: 4;
   position: fixed;
