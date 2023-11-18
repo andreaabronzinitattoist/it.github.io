@@ -95,15 +95,17 @@ function drawRouletteWheel() {
             //Arrow
             ctx.fillStyle = "white";
             ctx.beginPath();
-            ctx.moveTo(350 - 150, 3 + (outsideRadius + 5) - 130);
-            ctx.lineTo(350 + 8 - 150, 3 + (outsideRadius + 5) - 130);
-            ctx.lineTo(350 + 8 - 150, -10 + (outsideRadius - 5) - 130);
-            ctx.lineTo(350 + 18 - 150, -10 + (outsideRadius - 5) - 130);
-            ctx.lineTo(350 + 0 - 150, -15 + (outsideRadius - 13) - 130);
-            ctx.lineTo(350 - 18 - 150, -10 + (outsideRadius - 5) - 130);
-            ctx.lineTo(350 - 8 - 150, -10 + (outsideRadius - 5) - 130);
-            ctx.lineTo(350 - 8 - 150, -5 + (outsideRadius + 5) - 130);
+            ctx.moveTo(350 - 150, 10 + (outsideRadius + 5) - 35); // Modifica la prima coordinata y sottraendo 75
+            ctx.lineTo(350 + 8 - 150, 10 + (outsideRadius + 5) - 35); // Modifica la seconda coordinata y sottraendo 75
+            ctx.lineTo(350 + 8 - 150, -10 + (outsideRadius - 5) - 35); // Modifica la terza coordinata y sottraendo 75
+            ctx.lineTo(350 + 18 - 150, -10 + (outsideRadius - 5) - 35); // Modifica la quarta coordinata y sottraendo 75
+            ctx.lineTo(350 + 0 - 150, -30 + (outsideRadius - 13) - 35); // Modifica la quinta coordinata y sottraendo 75
+            ctx.lineTo(350 - 18 - 150, -10 + (outsideRadius - 5) - 35); // Modifica la sesta coordinata y sottraendo 75
+            ctx.lineTo(350 - 8 - 150, -10 + (outsideRadius - 5) - 35); // Modifica la settima coordinata y sottraendo 75
+            ctx.lineTo(350 - 8 - 150, 10 + (outsideRadius + 5) - 35); // Modifica l'ottava coordinata y sottraendo 75
             ctx.fill();
+
+
         }
     } else
     {

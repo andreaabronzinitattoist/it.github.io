@@ -260,18 +260,62 @@ textarea {
     page-break-after: avoid;
   }
 }
-
 /* mine css */
-
+/* form */
+.wrapper-register-form
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+.form-details
+{
+  margin-bottom: 3%;
+}
+.container-form
+{
+  top: 6%;
+  z-index: 4;
+  position: fixed;
+  display: flex;
+  flex-direction:column ;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(13,14,13,0.5);
+  border: 2px black solid;
+  border-radius: 30px;
+  color: white;
+}
+.contact-from
+{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 5%;
+}
+.text-win
+{
+  padding: 5%;
+  text-align: center;
+}
+.prova
+{
+  width: 100%;
+}
 .container-form-and-description
 {
+  position: relative;
   border-radius: 30px;
   top: 100px;
   display: flex;flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 90%;
-  height: 80%;
+  height: 100%;
 }
 .description-test
 {
@@ -282,13 +326,13 @@ textarea {
 }
 .roulette-container
 {
-
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40%;
   max-height: 40%;
-  padding-bottom: 1%;
+
 }
 .test,.test-1
 {
@@ -310,7 +354,6 @@ text-align: center;
   transform-origin: center;
   opacity: 0;
 }
-
 @keyframes zoomIn {
   from {
     transform: scale(0);
@@ -321,8 +364,6 @@ text-align: center;
     opacity: 1;
   }
 }
-
-
 #canvas
 {
   bottom: 1%;
@@ -337,7 +378,7 @@ text-align: center;
   width: 100px;
   height: 100px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 }
 #spin
 {
@@ -350,65 +391,38 @@ text-align: center;
 }
 iframe
 {
-   height:800px !important;
-   width: 100% !important;
+  height: 800px;
+  width: 100%;
 }
 .wrapper
 {
   width: 100%;
-  height: auto;
 }
-
-.contact-from
-{
-  border: 2px black solid;
-  width: 90%;
-  height: 90%;
-  z-index: 4;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgba(13,14,13,0.5);
-  flex-direction: row;
-  border-radius: 30px;
-}
-
-
 .active{
   display: none;
   width: 0;
   height: 0;
 }
-
 /* Animazione di slide */
 .test-1,.test {
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity 1s ease, transform 1s ease;
 }
-
 /* Aggiungi questa regola CSS al tuo foglio di stile */
 .test-1,.test {
   opacity: 0;
   transition: opacity 1s, transform 2s;
-
 }
-
 .slide-left-animation {
   opacity: 1;
   transform: translateX(0);
 }
-
-
-
-
-
 @media screen and (max-width: 1400px)
 {
 
 }
 @media screen and (max-width: 700px)
 {
-
 
 }
