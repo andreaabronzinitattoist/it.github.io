@@ -262,6 +262,14 @@ textarea {
 }
 /* mine css */
 /* form */
+.upper-video
+{
+  height: 500px;
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+
+}
 .wrapper-register-form
 {
   display: flex;
@@ -391,7 +399,7 @@ text-align: center;
 }
 iframe
 {
-  height: 680px;
+  height: 760px;
   width: 100%;
 }
 .wrapper
