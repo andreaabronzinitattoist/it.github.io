@@ -309,9 +309,8 @@ img
 }
 .button-details
 {
+  width: 100%;
   border-radius: 30px;
-  margin: 50px;
-  width: 70%;
   border: 1px solid black;
   background: rgb(174,0,214);
   background: linear-gradient(90deg, rgba(174,0,214,1) 0%, rgba(195,114,214,1) 48%, rgba(206,157,218,1) 83%);
@@ -324,7 +323,7 @@ body
 }
 .container-form {
 top: 1px;
-  width: 99%;
+  width: 90%;
   z-index: 4;
   position: fixed;
   display: flex;
@@ -334,7 +333,7 @@ top: 1px;
   border: 2px black solid;
   border-radius: 30px;
   color: black;
-  max-height: 200vh;
+  max-height: fit-content;
   background-color: white;
 }
 .contact-from
@@ -342,17 +341,23 @@ top: 1px;
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 5%;
 }
 .text-win
 {
-  font-weight: 900;
+  font-size: large;
   margin-top: 10%;
   padding: 5%;
   text-align: center;
+}
+.text-win-container
+{
+  height: fit-content;
+  width: 100%;
+
 }
 .prova
 {
