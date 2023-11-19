@@ -261,14 +261,78 @@ textarea {
   }
 }
 /* mine css */
+html,body
+{
+  height: 100%;
+}
+.rules
+{
+  height: 75%;
+  width: 85%;
+  background-color: white;
+  position: fixed;
+  z-index: 2;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  box-shadow: 0px 2px 23px 9px #000000;
+}
+.text-rules-paragraph
+{
+  background-color: #49c1b4;
+  width: 90%;
+  height: 300px;
+  border: 1px solid black;
+  overflow: auto;
+}
+.button-close
+{
+  margin: 2.5%;
+  background-color:  #49c1b4;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: xx-large;
+}
+.rules-div1
+{
+ height: 30%;
+  width: 100%;
+  background-color: white;
+}
+.rules-div2
+{
+  height: 70%;
+  width: 100%;
+  background-color: #49c1b4;
+ border-radius: 54% 46% 100% 0% / 28% 15% 0% 72% ;
+  border-top: 1px solid black;
+}
+.title-rules
+{
+  text-align: center;
+  font-size: x-large;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.regole
+{
+  padding-top: 20%;
+  font-size: xx-large;
+}
 /* form */
 .upper-video
 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 0;
-  height: 600px;
+  height: 100%;
   width: 100%;
-  background-color: transparent;
-  position: absolute;
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
   z-index: 1;
 
 }
@@ -322,16 +386,16 @@ body
   align-items: center;
 }
 .container-form {
-top: 1px;
-  width: 90%;
+  width: 100%;
+  height: 100%;
   z-index: 4;
   position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px black solid;
-  border-radius: 30px;
+
+
   color: black;
   max-height: fit-content;
   background-color: white;
@@ -361,7 +425,6 @@ top: 1px;
 {
   position: relative;
   border-radius: 30px;
-  top: 100px;
   display: flex;flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -384,20 +447,6 @@ top: 1px;
   width: 40%;
   max-height: 40%;
 
-}
-.test,.test-1
-{
-  animation-delay: 3s;
-  padding: 5%;
-  border-radius: 20px;
-  background-color: rgba(13,14,13,0.5);
-  margin-top: 40%;
-  margin-bottom: 40%;
-  font-size: large;
-text-align: center;
-  width: 70%;
-  height: auto;
-  border:3px solid #f9c3e4;
 }
 /* Aggiungi questa regola CSS al tuo foglio di stile */
 .zoom-in-animation {

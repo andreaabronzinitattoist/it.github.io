@@ -55,7 +55,7 @@ function drawRouletteWheel() {
     if (mobile.matches)
     {
         if (canvas.getContext) {
-            var outsideRadius = 190;
+            var outsideRadius = 170;
             var textRadius = 120;
             var insideRadius = 20;
             canvas.height="400";
@@ -94,14 +94,14 @@ function drawRouletteWheel() {
             //Arrow
             ctx.fillStyle = "white";
             ctx.beginPath();
-            ctx.moveTo(350 - 150, 10 + (outsideRadius + 5) - 35); // Modifica la prima coordinata y sottraendo 75
-            ctx.lineTo(350 + 8 - 150, 10 + (outsideRadius + 5) - 35); // Modifica la seconda coordinata y sottraendo 75
-            ctx.lineTo(350 + 8 - 150, -10 + (outsideRadius - 5) - 35); // Modifica la terza coordinata y sottraendo 75
-            ctx.lineTo(350 + 18 - 150, -10 + (outsideRadius - 5) - 35); // Modifica la quarta coordinata y sottraendo 75
-            ctx.lineTo(350 + 0 - 150, -30 + (outsideRadius - 13) - 35); // Modifica la quinta coordinata y sottraendo 75
-            ctx.lineTo(350 - 18 - 150, -10 + (outsideRadius - 5) - 35); // Modifica la sesta coordinata y sottraendo 75
-            ctx.lineTo(350 - 8 - 150, -10 + (outsideRadius - 5) - 35); // Modifica la settima coordinata y sottraendo 75
-            ctx.lineTo(350 - 8 - 150, 10 + (outsideRadius + 5) - 35); // Modifica l'ottava coordinata y sottraendo 75
+            ctx.moveTo(350 - 150, 10 + (outsideRadius + 5) - 10); // Modifica la prima coordinata y sottraendo 75
+            ctx.lineTo(350 + 8 - 150, 10 + (outsideRadius + 5) - 10); // Modifica la seconda coordinata y sottraendo 75
+            ctx.lineTo(350 + 8 - 150, -10 + (outsideRadius - 5) - 10); // Modifica la terza coordinata y sottraendo 75
+            ctx.lineTo(350 + 18 - 150, -10 + (outsideRadius - 5) - 10); // Modifica la quarta coordinata y sottraendo 75
+            ctx.lineTo(350 + 0 - 150, -30 + (outsideRadius - 13) - 5); // Modifica la quinta coordinata y sottraendo 75
+            ctx.lineTo(350 - 18 - 150, -10 + (outsideRadius - 5) - 10); // Modifica la sesta coordinata y sottraendo 75
+            ctx.lineTo(350 - 8 - 150, -10 + (outsideRadius - 5) - 10); // Modifica la settima coordinata y sottraendo 75
+            ctx.lineTo(350 - 8 - 150, 10 + (outsideRadius + 5) - 10); // Modifica l'ottava coordinata y sottraendo 75
             ctx.fill();
 
 
@@ -261,7 +261,24 @@ function isElementInViewport(el) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
+function aggiungiClasse() {
+    var rulesDiv = document.querySelector('.rules');
+    var closeButton = document.querySelector('.button-close');
+    var regole = document.querySelector(".regole");
+    var titlerules = document.querySelector(".title-rules");
+    rulesDiv.classList.add('active'); // Aggiungi la classe 'active' al div con la classe 'rules'
+    closeButton.classList.add('active');
+    regole.classList.add('active');
+    titlerules.classList.add('active');
+}
+document.addEventListener('DOMContentLoaded', function() {
+    var closeButton = document.querySelector('.button-close');
 
+    // Aggiungi un listener al bottone con la classe 'button-close'
+    closeButton.addEventListener('click', function() {
+        aggiungiClasse(); // Chiama la funzione per aggiungere la classe 'active'
+    });
+});
 function handleScrollAnimation() {
 var testDiv = document.querySelector('.test');
 var testDiv1 = document.querySelector('.test-1');
