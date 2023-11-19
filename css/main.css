@@ -281,12 +281,13 @@ html,body
 {
   background-color: #49c1b4;
   width: 90%;
-  height: 300px;
+  height: 250px;
   border: 1px solid black;
   overflow: auto;
 }
 .button-close
 {
+  text-align: center;
   margin: 2.5%;
   background-color:  #49c1b4;
   border: 1px solid black;
