@@ -266,10 +266,12 @@ function aggiungiClasse() {
     var closeButton = document.querySelector('.button-close');
     var regole = document.querySelector(".regole");
     var titlerules = document.querySelector(".title-rules");
+    var textsrules = document.querySelector(".text-rules-paragraph")
     rulesDiv.classList.add('active'); // Aggiungi la classe 'active' al div con la classe 'rules'
     closeButton.classList.add('active');
     regole.classList.add('active');
     titlerules.classList.add('active');
+    textsrules.classList.add('active');
 }
 document.addEventListener('DOMContentLoaded', function() {
     var closeButton = document.querySelector('.button-close');
