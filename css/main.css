@@ -20,9 +20,11 @@ html,body
 {
   background-color: #49c1b4;
   width: 90%;
-  height: 250px;
+  max-height: 60%;
   border: 1px solid black;
-  overflow: auto;
+  overflow-y: scroll;
+  margin-bottom: 3%;
+
 }
 .button-close
 {
@@ -263,7 +265,41 @@ iframe
 {
 
 }
-@media screen and (max-width: 700px)
+@media screen and (max-height: 750px)
+{
+  .text-rules-paragraph
+  {
+    background-color: #49c1b4;
+    width: 90%;
+    max-height: 40%;
+    border: 1px solid black;
+    overflow-y: scroll;
+
+  }
+  .regole
+  {
+    padding-top: 20%;
+    font-size: xx-large;
+  }
+}
+@media screen and (max-height: 660px)
+{
+  .text-rules-paragraph
+  {
+    background-color: #49c1b4;
+    width: 90%;
+    max-height: 35%;
+    border: 1px solid black;
+    overflow-y: scroll;
+
+  }
+}
+@media screen and (max-height: 600px)
 {
 
+  .regole
+  {
+    padding-top: 10%;
+    font-size: xx-large;
+  }
 }
