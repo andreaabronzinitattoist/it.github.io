@@ -4,12 +4,22 @@ html,body
 {
   height: 100%;
 }
+.container-rules
+{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: transparent;
+}
 .rules
 {
-  height: 85%;
+  height: fit-content;
   width: 85%;
   background-color: white;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   border-top: 1px solid black;
   border-left: 1px solid black;
@@ -20,9 +30,8 @@ html,body
 {
   background-color: #49c1b4;
   width: 90%;
-  max-height: 60%;
-  border: 1px solid black;
-  overflow-y: scroll;
+
+
   margin-bottom: 3%;
 
 }
@@ -34,7 +43,6 @@ html,body
   background-color:  #49c1b4;
   border: 1px solid black;
   width: 40px;
-  height: 40px;
   border-radius: 50%;
   font-weight: bold;
   font-size: large;
@@ -47,7 +55,7 @@ html,body
 }
 .rules-div2
 {
-  height: 70%;
+  height: fit-content;
   width: 100%;
   background-color: #49c1b4;
  border-radius: 54% 46% 100% 0% / 28% 15% 0% 72% ;
@@ -59,11 +67,16 @@ html,body
   font-size: x-large;
   margin-top: 5%;
   margin-bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 .regole
 {
-  padding-top: 20%;
+  margin-top: 10%;
   font-size: xx-large;
+  margin-bottom: 15%;
 }
 /* form */
 .upper-video
@@ -261,9 +274,28 @@ iframe
   opacity: 1;
   transform: translateX(0);
 }
+.logo-homepage
+{
+  position: fixed;
+  top: 0;
+  background-color: #49c1b4;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  z-index: 2;
+  align-content: center;
+  justify-content: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.logo-homepage-img
+{
+  border-radius: 30px;
+  width: 100px;
+  height: 100px;
+}
 @media screen and (max-width: 1400px)
 {
-
 }
 @media screen and (max-height: 820px)
 {
@@ -271,14 +303,10 @@ iframe
   {
     background-color: #49c1b4;
     width: 90%;
-    max-height: 60%;
-    border: 1px solid black;
-    overflow-y: scroll;
-
+    height: auto;
   }
   .regole
   {
-    padding-top: 10%;
     font-size: xx-large;
   }
 }
@@ -288,14 +316,14 @@ iframe
   {
     background-color: #49c1b4;
     width: 90%;
-    max-height: 40%;
-    border: 1px solid black;
-    overflow-y: scroll;
+    height: auto;
+    overflow-y: hidden;
+
 
   }
   .regole
   {
-    padding-top: 20%;
+
     font-size: xx-large;
   }
 }
@@ -306,9 +334,8 @@ iframe
     background-color: #49c1b4;
     width: 90%;
     max-height: 35%;
-    border: 1px solid black;
-    overflow-y: scroll;
 
+    overflow-y: hidden;
   }
 }
 @media screen and (max-height: 600px)
@@ -316,7 +343,25 @@ iframe
 
   .regole
   {
-    padding-top: 10%;
+
     font-size: xx-large;
+  }
+}
+@media screen and (max-width: 400px)
+{
+
+  .rules
+  {
+    margin-top: 50%;
+
+  }
+}
+@media screen and (min-width: 1020px)
+{
+
+  .rules
+  {
+    margin-top: 20%;
+
   }
 }
