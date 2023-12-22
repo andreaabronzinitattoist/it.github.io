@@ -1,6 +1,5 @@
 <!doctype html>
 <html class="no-js" lang="">
-
 <head>
     <meta charset="utf-8">
     <title></title>
@@ -10,6 +9,7 @@
     <meta property="og:type" content="">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
@@ -18,67 +18,46 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-<div class="logo-homepage"><img class="logo-homepage-img" src="./icons/logo.png" alt=""></div>
-<div class="container-rules">
-<div class="rules d-flex flex-column align-items-center justify-content-center">
-    <div class="rules-div1 d-flex flex-column">
-        <button class="button-close">
-            <img class="button-img" src="./icons/xmark-solid.svg" alt="">
-        </button>
-        <div class="title-rules">
-            s c o p r i &nbsp; c o m e <br> f u n z i o n a
-        </div>
-    </div>
-    <div class="rules-div2 d-flex flex-column align-items-center">
-        <div class="text-rules d-flex  flex-column align-items-center">
-           <p class="regole">r e g o l e!!</p>
-            <p class="text-rules-paragraph">
-                benvenuti sulla piattaforma di Andrea Abronzini Tattoist,<br> siete capitati qui sicuramente perché per l'ennesima volta volete tentare la fortuna?
-                beh piccolo spoiler, l'occasione di vincita c'è per ognuno di voi.<br>
-                come? ecco a voi le regole:<br>
-                1- appena toccherete la (X) qui in alto a sinistra si aprirà una schermata con una ruota<br>
-                2- toccando il centro, sul logo,  la ruota inizierà a girare<br>
-                3- ci sono dei valori, questi valori indicano il prezzo per il quale voi possiate venire a fare un tattoo di piccole dimensioni, purtroppo non sono i valori che vincerete, ma è il valore possibile con cui voi possiate farvi un tattoo.<br>
-                4- una volta uscito il valore, si aprirà una schermata con un modulo da compilare.<br>
-                5- compila il modulo e verrai ricontattat* per prendere un appuntamento.<br>
-                D I V E R T I T E V I !!
-            </p>
-        </div>
-    </div>
+<div class="logo-homepage">
+    <img class="logo-homepage-img" src="./icons/logo.png" alt="">
 </div>
+<div class="container-rules">
+    <div class="rules d-flex flex-column align-items-center justify-content-around">
+        <div class="container-button">
+            <button class="button-close" type='button'>X</button>
+        </div>
+        <div class="title">S C O P R I &nbsp; C O M E <br> F U N Z I O N A </div>
+        <div class="testo-regole">
+            <p>Benvenuti sulla piattaforma di Andrea Abronzini Tattoist, siete capitati qui sicuramente perché per l'ennesima volta volete tentare la fortuna? <br> Beh, piccolo spoiler, l'occasione di vincita c'è per ognuno di voi. Come?<br> Ecco a voi le regole:</p>
+            <ol>
+                <li>Appena toccherete la (X) qui in alto a sinistra si aprirà una schermata con una ruota.</li>
+                <li>Toccando il centro, sul logo, la ruota inizierà a girare.</li>
+                <li>Ci sono dei valori, questi valori indicano il prezzo per il quale voi possiate venire a fare un tattoo di piccole dimensioni, purtroppo non sono i valori che vincerete, ma è il valore possibile con cui voi possiate farvi un tattoo.</li>
+                <li>Una volta uscito il valore, si aprirà una schermata con un modulo da compilare.</li>
+                <li>Compila il modulo e verrai ricontattato per prendere un appuntamento.</li>
+            </ol>
+            <p class="text-center">D I V E R T I T E V I !!</p>
+        </div>
+    </div>
 </div>
 
 <div class="upper-video">
     <div class="container-form-and-description">
         <div class="roulette-container">
-            <img class="spin-img" src="./icons/logo.png">
+            <img class="spin-img" src="./icons/logo.png" alt="">
             <input type="button" id='spin'/>
-            </img>
+            <!-- </img> Not needed here -->
             <canvas id="canvas" width="700" height="700"></canvas>
-
-
         </div>
     </div>
 </div>
-<!-- sezioni regole -->
+
 <div class="wrapper d-flex justify-content-center flex-column align-items-center">
-    <!-- mettere video qui -->
-
-
-
-
-
-
-
-
-
     <!-- Add your site or application content here -->
-
     <div class="container-form active">
         <h2 class="text-win text-mobile"></h2>
         <form class="contact-from " action="#">
@@ -94,14 +73,12 @@
             </div>
         </form>
     </div>
-
-
+</div>
 
 <script src="vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
@@ -116,7 +93,5 @@
     ga('send', 'pageview')
 </script>
 <script src="https://www.google-analytics.com/analytics.js" async></script>
-
 </body>
-
 </html>

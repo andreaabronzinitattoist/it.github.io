@@ -264,8 +264,8 @@ function isElementInViewport(el) {
 function aggiungiClasse() {
     var rulesDiv = document.querySelector('.rules');
     var closeButton = document.querySelector('.button-close');
-    var regole = document.querySelector(".regole");
-    var titlerules = document.querySelector(".title-rules");
+    var regole = document.querySelector(".testo-regole");
+    var titlerules = document.querySelector(".title");
     var textsrules = document.querySelector(".text-rules-paragraph")
     rulesDiv.classList.add('active'); // Aggiungi la classe 'active' al div con la classe 'rules'
     closeButton.classList.add('active');
@@ -287,25 +287,13 @@ var testDiv1 = document.querySelector('.test-1');
 var triggerPosition = 200;
 var triggerPosition1 = 550;
 
-if (window.scrollY > triggerPosition && !testDiv.classList.contains('zoom-in-animation')) {
-    testDiv.classList.add('zoom-in-animation');
-}
 
-if (window.scrollY > triggerPosition1 && !testDiv1.classList.contains('slide-left-animation')) {
-    setTimeout(function() {
-        testDiv1.classList.add('slide-left-animation');
-    }, 100);
-}
+
+
 }
 form.addEventListener('submit', sendMsg);
 
-window.addEventListener('scroll', function() {
-    handleScrollAnimation();
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-    handleScrollAnimation();
-});
 
 
 
