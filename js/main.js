@@ -207,7 +207,7 @@ function stopRotateWheel() {
         form_email.classList.remove("active")
         ctx.restore();
         numero = localStorage.text;
-        win.textContent="Sembra che tu abbia già girato la ruota una volta, hai vinto la possibilità di farti un tatuaggio a " + numero;
+        win.textContent="Sembra che tu abbia già girato la ruota una volta, hai vinto la possibilità di farti un tatuaggio dal valore di " + numero;
         if (mobile.matches)
         {
             win.classList.add("")
@@ -220,7 +220,7 @@ function stopRotateWheel() {
         ctx.restore();
         form_email.classList.remove("active")
         numero = localStorage.text;
-        win.textContent="Congratulazione hai vinto la possibilità di farti un tatuaggio a " + numero;
+        win.textContent="Congratulazione hai vinto la possibilità di farti un tatuaggio dal valore di " + numero;
     }
 
 }
